@@ -39,7 +39,7 @@ class TaskManager {
   addTask(description) {
     //Generamos un id para la tarea y la creamos con la descripción dada
     //con el operador ternario si ya existen tareas registradas, incrementamos el id
-    //si el la primera el id sera 1
+    //sino la primera el id sera 1
     const id = this.tasks.length ? this.tasks[this.tasks.length - 1].id + 1 : 1;
 
     //Hacemos uso de la clase Task e instanciamos la tarea con sus
@@ -107,7 +107,7 @@ class TaskManager {
     }
   }
 
-  //creamos la funcion para subir la lista al localstorage
+  //creamos el metodo para subir la lista al localstorage
 
   saveTasks() {
     //subimos al localstorage la lista actual al momento
@@ -121,7 +121,7 @@ class TaskManager {
   // }
 
   renderTasks() {
-    //obtenemos el elemnto donde se renderizaran las tareas
+    //obtenemos el elemento donde se renderizaran las tareas
     const $taskList = document.getElementById("task-list");
     //lo seteamos siempre a vacia
     $taskList.innerHTML = "";
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //obtenemos el boton para añadir taks y asignamos el evento
   document.getElementById("add-task").addEventListener("click", () => {
     //obtenemos la descripcion de la tarea desde el input
-    const newTask = document.getElementById("new-task").value;
+    const newTask = document.getElnewNementById("new-task").value;
     if (newTask) {
       //si hay tarea designada la añadimos a la lista
       taskManager.addTask(newTask);

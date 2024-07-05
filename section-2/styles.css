@@ -1,0 +1,96 @@
+/* Reset */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+}
+
+#app h1 {
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+}
+
+#new-note {
+  margin: 20px 10px;
+  width: 400px;
+  padding: 10px 20px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add-note {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid;
+  color: deepskyblue;
+  transition: all 0.3s ease;
+}
+
+#add-note:hover {
+  cursor: pointer;
+  background-color: deepskyblue;
+  border: 1px solid deepskyblue;
+  color: #222;
+}
+
+#note-list {
+  margin: 20px 30px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 0px;
+  list-style: none;
+}
+
+#note-list li p:nth-child(1) {
+  padding: 10px;
+  background-color: deepskyblue;
+  border: 1px solid deepskyblue;
+  color: #222;
+  text-align: center;
+}
+
+#note-list li {
+  width: 100%;
+}
+
+#note-list li button {
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: transparent;
+  padding: 5px 15px;
+  border: solid 1px #222;
+  cursor: pointer;
+  color: #222;
+  transition: all 0.2s ease;
+  width: 100px;
+}
+
+#note-list li button:hover {
+  background-color: #222;
+  border: 1px solid #222;
+  color: white;
+}
+
+.important > p:nth-child(2) {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
