@@ -9,13 +9,9 @@ class Task {
     this.completed = completed;
   }
 
-  //creamos el método toggleComplete que cambia el estado de la tarea
-  //no implementamos toggleComplete, debido a que si recuperamos tareas
-  //del localstorage al empezar, estas pierden su instancia de clase
-  //por lo tanto al usar este metodo, no ejecutara nada arrojara error
-  // toggleComplete() {
-  //   this.completed = !this.completed;
-  // }
+  toggleComplete() {
+    this.completed = !this.completed;
+  }
 }
 
 //Se crea la clase taskManager donde se realizar el crud para que
@@ -27,6 +23,23 @@ class TaskManager {
     //Seteamos la lista de task con contenido si ya existe en el localstorage
     //sino, lista vacia
     this.tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    //si bajamos los datos de la localastorage, significa que ya es un objeto comun
+    //y no una instancia de clase, por lo cual ya no tendran los metodos
+    //Para solucionar re asignamos tasks con un array con los elementos de nuevo instanciado
+    if (this.tasks.length) {
+      this.tasks = this.tasks.map((task) => {
+        const taskInstantiatedAgain = new Task(
+          task.id,
+          task.description,
+          task.completed
+        );
+
+        return taskInstantiatedAgain;
+      });
+    }
+
+    // console.dir(this.tasks);
 
     //-> Se omite loadTasks, ya que solo llama a renderTask
     //y se llama a renderTask directamente
@@ -96,10 +109,10 @@ class TaskManager {
     if (task) {
       //No utilizamos el metodo ya que lo quitamos por problemas con
       //el tipo instancia al recuperarlos desde la localstorage
-      // task.toggleComplete();
+      task.toggleComplete();
 
       //le cambiamos el atributo desde la tarea directamente, no desde su metodo
-      task.completed = !task.completed;
+      // task.completed = !task.completed;
 
       //Se guarda de nuevo la lista en la localstorage y se renderiza
       this.saveTasks();
@@ -195,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //obtenemos el boton para añadir taks y asignamos el evento
   document.getElementById("add-task").addEventListener("click", () => {
     //obtenemos la descripcion de la tarea desde el input
-    const newTask = document.getElnewNementById("new-task").value;
+    const newTask = document.getElementById("new-task").value;
     if (newTask) {
       //si hay tarea designada la añadimos a la lista
       taskManager.addTask(newTask);
