@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consumiendo Platzi Fake Store API</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Platzi Fake Store API</h1>
+      <button id="fetch-all-products-button">Cargar todos los productos</button>
+      <br />
+      <br />
+      <select name="search_type" id="select-category">
+        <option selected value="">--- Buscar por categoria ---</option>
+        <option value="1">Ropa</option>
+        <option value="2">Electronica</option>
+        <option value="3">Muebleria</option>
+        <option value="4">Zapatos</option>
+        <option value="5">Miscelaneos</option>
+      </select>
+      <button id="category-filter-button">Filtrar!</button>
+      <br />
+      <br />
+      <input type="text" placeholder="Buscar por nombre" />
+      <button id="name-filter-button">Buscar!</button>
+      <table></table>
+      <div id="error-message"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
