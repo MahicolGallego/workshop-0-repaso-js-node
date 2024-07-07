@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
     products.forEach((product) => {
       //Creamos las filas para cada producto
       const $row = document.createElement("TR");
-      //Creamos y llenamos las cerda para cada dato
+      //Creamos y llenamos las celdas para cada dato
       const $tdName = document.createElement("TD");
       $tdName.textContent = product.title;
 

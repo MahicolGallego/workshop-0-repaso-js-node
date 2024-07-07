@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+}
+
+#app {
+  padding: 100px;
+  width: 80vw;
+}
+
+#app h1 {
+  padding: 20px;
+  width: 80vw;
+  background-color: hsl(224, 14%, 16%);
+  color: white;
+  margin-bottom: 30px;
+}
+
+#app button {
+  padding: 5px 18px;
+  color: hsl(224, 14%, 16%);
+  border: 1px solid hsl(224, 14%, 16%);
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+#app button:hover {
+  padding: 5px 18px;
+  color: white;
+  border: 1px solid hsl(224, 14%, 16%);
+  background-color: hsl(224, 14%, 16%);
+}
+
+input,
+select {
+  padding: 5px 10px;
+}
+
+table {
+  width: 80vw;
+  margin-top: 50px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid hsl(224, 14%, 16%);
+}
+
+th {
+  background-color: hsl(224, 14%, 16%);
+  color: white;
+}

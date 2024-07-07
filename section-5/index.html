@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practicing Array methods</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Practicing Array methods</h1>
+      <button id="all-products-button">Cargar todos los productos</button>
+      <br />
+      <br />
+      <button id="total-value-stock-button">Valor Total del stock $</button>
+      <br />
+      <br />
+      <select name="search_category" id="select-category">
+        <option selected value="">--- Buscar por categoria ---</option>
+        <option value="Clothing">Ropa</option>
+        <option value="Electronics">Electronica</option>
+        <option value="Accessories">Accesorios</option>
+      </select>
+      <button id="category-filter-button">Filtrar!</button>
+      <br />
+      <br />
+      <input type="text" placeholder="Buscar producto..." />
+      <button id="name-filter-button">Buscar!</button>
+      <br />
+      <br />
+      <button id="products-availability-button">
+        ¿Todos los productos tienen disponibilidad?
+      </button>
+      <br />
+      <br />
+      <button id="all-name-products-button">
+        Nombres de todos los productos
+      </button>
+      <table></table>
+      <div id="error-message"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
